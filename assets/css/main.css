@@ -1,0 +1,1244 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700');
+
+* {
+	font-family: 'Lato', sans-serif;
+	font-size  : 1em;
+	margin     : 0px;
+	padding    : 0px;
+	outline    : none;
+	box-sizing : border-box;
+}
+
+body {
+	width           : 100%;
+	background-color: rgb(255, 255, 255);
+}
+
+	body > button {
+		display         : none;
+		width           : 32px;
+		background-color: transparent;
+		border          : none;
+		position        : fixed;
+		left            : 0;
+		top             : 0;
+		z-index         : 1000;
+		margin-top      : 32px;
+		margin-left     : 32px;
+	}
+
+		body > button > span {
+			display         : block;
+			width           : 32px;
+			height          : 1px;
+			background-color: rgb(255, 255, 255);
+			margin-bottom   : 4px;
+			box-shadow      : 0 0 1px rgba(0, 0, 0, 0.85);
+			transition      : all 0.3s ease-out;
+		}
+
+		body > button > span:last-of-type {
+			margin-bottom: 0px;
+		}
+
+		.active-button {
+			margin-bottom: 8px;
+			box-shadow   : none;
+		}
+
+	body > nav {
+		width          : 100%;
+		height         : 120px;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+		position       : fixed;
+		transition     : all 0.3s ease-out;
+		z-index        : 1000;
+	}
+
+	.active-menu {
+		margin-left: 0px;
+	}
+
+		body > nav > div {
+			width          : 80%;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+			align-items    : center;
+		}
+
+			body > nav > div > a {
+				display: block;
+				height : 70px;
+				width  : auto;
+			}
+
+				body > nav > div > a > img {
+					display: block;
+					height : 100%;
+				}
+
+			body > nav > div > ul {
+				list-style: none;
+			}
+
+				body > nav > div > ul > li {
+					display : inline-block;
+					position: relative;
+				}
+
+				body > nav > div > ul > li:before {
+					content         : '';
+					position        : absolute;
+					height          : 100%;
+					width           : 1px;
+					background-color: rgb(255, 255, 255);
+					right           : 0;
+					top             : 0;
+				}
+
+				body > nav > div > ul > li:last-of-type:before {
+					display: none;
+				}
+
+					body > nav > div > ul > li > a {
+						display        : block;
+						text-decoration: none;
+						padding        : 8px 16px;
+						color          : rgb(255, 255, 255);
+						text-transform : uppercase;
+						font-weight    : 300; 
+					}
+
+	body > header {
+		width              : 100%;
+		height             : 100vh;
+		background-size    : cover;
+		background-repeat  : no-repeat;
+		background-position: 0px -50px;
+		display            : flex;
+		align-items        : center;
+		justify-content    : center;
+		position           : relative;
+	}
+
+		body > header > div {
+			width: 80%;
+		}
+
+			body > header > div > h1 {
+				color      : rgb(255, 255, 255);
+				font-size  : 3em;
+				white-space: pre-line;
+				font-weight: 100;
+			}
+
+				body > header > div > h1 > strong {
+					font-weight: 700;
+					font-size: 1.25em;
+				}
+
+		body > header > a {
+			display        : none;
+			justify-content: center;
+			width          : 32px;
+			height         : 64px;
+			border         : 1px solid rgb(228, 21, 27);
+			color          : rgb(228, 21, 27);
+			border-radius  : 6px;
+			position       : absolute;
+			margin-bottom  : 32px;
+			bottom         : 0;
+			text-align     : center;
+			text-decoration: none;
+		}
+
+			body > header > a > i {
+				position : absolute;
+				animation: arrowheader 1.75s infinite;
+			}
+
+			@keyframes arrowheader {
+				0% {
+					opacity: 0;
+				}
+				25% {
+					opacity: 0.5;
+				}
+				50% {
+					opacity: 1;
+				}
+				75% {
+					opacity: 0.5;
+				}
+				100% {
+					margin-top: 40px;
+					opacity   : 0;
+				}
+			}
+
+		body > header > img {
+			display     : block;
+			width       : 220px;
+			position    : absolute;
+			bottom      : 0;
+			right       : 0;
+		}
+
+	body > #nosotros {
+		padding: 48px 0px;
+	}
+
+		body > #nosotros > div {
+			width : 80%;
+			margin: auto;
+		}
+
+			body > #nosotros > div > h2 {
+				color        : rgb(236, 9, 40);
+				font-weight  : 100;
+				font-size    : 2.5em;
+				margin-bottom: 32px;
+			}
+
+				body > #nosotros > div > h2 > strong {
+					font-size: 1.5em;
+				}
+
+			body > #nosotros > div > p {
+				font-size    : 1.25em;
+				font-weight  : 300;
+				color        : rgb(100, 100, 100);
+				margin-bottom: 32px;
+			}
+
+			body > #nosotros > div > p:last-of-type {
+				font-weight: 700;
+			}
+
+			body > #nosotros > div > section {
+				width          : 90%;
+				margin         : auto;
+				display        : flex;
+				flex-flow      : row wrap;
+				justify-content: space-between;
+			}
+
+				body > #nosotros > div > section > figure {
+					width          : 20%;
+					display        : flex;
+					align-items    : center;
+					flex-direction : column;
+				}
+
+					body > #nosotros > div > section > figure > div {
+						width        : 180px;
+						height       : 180px;
+						background   : rgb(228,21,27); /* Old browsers */
+						background   : -moz-linear-gradient(left, rgb(228,21,27) 0%, rgb(253,71,2) 100%);
+						background   : -webkit-linear-gradient(left, rgb(228,21,27) 0%,rgb(253,71,2) 100%);
+						background   : linear-gradient(to right, rgb(228,21,27) 0%,rgb(253,71,2) 100%);
+						filter       : progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4151b', endColorstr='#fd4702',GradientType=1 );
+						border-radius: 50%;
+						padding      : 3px;
+						position     : relative;
+					}
+
+						body > #nosotros > div > section > figure > div > div {
+							width          : 100%;
+							height         : 100%;
+							border         : 3px solid rgb(255, 255, 255);
+							display        : flex;
+							align-items    : center;
+							justify-content: center;
+							border-radius  : 50%;
+						}
+
+							body > #nosotros > div > section > figure > div > div > img {
+								display: block;
+								width  : 50%;
+							}
+
+					body > #nosotros > div > section > figure > figcaption {
+						white-space: pre-line;
+						margin-top : 16px;
+						font-size  : 1.1em;
+						text-align : center;
+					}
+
+			body > #nosotros > div > a {
+				display         : block;
+				margin          : auto;
+				width           : 10%;
+				background-color: rgb(228, 21, 27);
+				padding         : 8px 16px;
+				color           : rgb(255, 255, 255);
+				text-decoration : none;
+				display         : flex;
+				align-items     : center;
+				justify-content : center;
+				margin-top      : 32px;
+				transition      : all 0.3s ease-out;
+			}
+
+			body > #nosotros > div > a:hover {
+				background-color: rgb(253, 71, 2);
+			}
+
+	body > #beneficios {
+		width   : 100%;
+		height  : 100vh;
+		position: relative;
+	}
+
+		body > #beneficios > header {
+			width                : 100%;
+			height               : 60%;
+			background-size      : cover;
+			background-position  : center;
+			background-attachment: fixed;
+			display              : flex;
+			align-items          : center;
+			justify-content      : center;
+		}
+
+			body > #beneficios > header > div {
+				width: 80%;
+				color: rgb(255, 255, 255);
+			}
+
+				body > #beneficios > header > div > h3 {
+					font-size    : 2.5em;
+					font-weight  : 100;
+					margin-bottom: 32px;
+				}
+
+				body > #beneficios > header > div > p {
+					font-size    : 1.1em;
+					font-weight  : 300;
+					margin-bottom: 32px;
+					white-space  : pre-line;
+				}
+
+				body > #beneficios > header > div > p:last-of-type {
+					margin-bottom: 0px;
+				}
+
+		body > #beneficios > section {
+			width   : 100%;
+			height  : 40%;
+			position: relative;
+		}
+
+			body > #beneficios > section > img {
+				display : block;
+				position: absolute;
+			}
+
+			body > #beneficios > section > img:first-of-type {
+				width: 35%;
+				top  : 0;
+				left : 100px;
+			}
+
+			body > #beneficios > section > img:last-of-type {
+				width: 50%;
+				top  : -50px;
+				right: 100px;
+			}
+
+	body > #blog {
+		width           : 100%;
+		background-color: rgb(225, 225, 225);
+		padding         : 48px 0px;
+		position        : relative;
+	}
+
+		body > #blog > img {
+			display : block;
+			position: absolute;
+		}
+
+		body > #blog > img:first-of-type {
+			bottom: 0;
+			left  : -70px;
+		}
+
+		body > #blog > img:last-of-type {
+			top  : -50px;
+			right: 30px;
+		}
+
+		body > #blog > div {
+			width          : 80%;
+			margin         : auto;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+		}
+
+			body > #blog > div > h4 {
+				width        : 100%;
+				font-size    : 2.5em;
+				color        : rgb(228, 21, 27);
+				margin-bottom: 32px;
+			}
+
+			body > #blog > div > article {
+				width           : 32%;
+				padding         : 12px;
+				background-color: rgb(255, 255, 255);
+				box-shadow      : 0 0 1px rgba(0, 0, 0, 0.2);
+				border-radius   : 8px;
+			}
+
+				body > #blog > div > article > header {
+					width              : 100%;
+					height             : 250px;
+					background-size    : cover;
+					background-repeat  : no-repeat;
+					background-position: center;
+					margin-bottom      : 16px;
+					margin-top         : -24px;
+					border-radius      : 8px;
+					box-shadow      : 0 0 1px rgba(0, 0, 0, 0.3);
+				}
+
+				body > #blog > div > article > h5 {
+					font-size    : 1.5em;
+					color        : rgb(100, 100, 100);
+					margin-bottom: 16px;
+				}
+
+				body > #blog > div > article > p {
+					font-size    : 1.1em;
+					color        : rgb(100, 100, 100);
+					margin-bottom: 16px;
+				}
+
+				body > #blog > div > article > a {
+					display         : inline-block;
+					padding         : 8px 16px;
+					background-color: rgb(228, 21, 27);
+					color           : rgb(255, 255, 255);
+					text-decoration : none;
+					transition      : all 0.3s ease-out;
+				}
+
+				body > #blog > div > article > a:hover {
+					background-color: rgb(253, 71, 2);
+				}
+
+		body > #blog > a {
+			width           : 10%;
+			display         : block;
+			padding         : 8px 16px;
+			background-color: rgb(228, 21, 27);
+			color           : rgb(255, 255, 255);
+			margin          : auto;
+			text-decoration : none;
+			text-align      : center;
+			margin-top      : 32px;
+			transition      : all 0.3s ease-out;
+		}
+
+		body > #blog > a:hover {
+			background-color: rgb(253, 71, 2);
+		}
+
+	body > #contacto {
+		width: 100%;
+	}
+
+		body > #contacto > header {
+			width                : 100%;
+			height               : 350px;
+			background-attachment: fixed;
+			background-size      : cover;
+			background-repeat    : no-repeat;
+			background-position  : center;
+			display              : flex;
+			align-items          : center;
+			justify-content      : center;
+		}
+
+			body > #contacto > header > h6 {
+				display    : block;
+				width      : 80%;
+				color      : rgb(255, 255, 255);
+				font-size  : 2.5em;
+				font-weight: lighter;
+				white-space: pre-line;
+			}
+
+				body > #contacto > header > h6 > strong {
+					font-size: 1.5em;
+				}
+
+		body > #contacto > section {
+			width          : 100%;
+			height         : 500px;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+			position       : relative;
+		}
+
+				body > #contacto > section > section {
+					width          : 65%;
+					display        : flex;
+					align-items    : center;
+					justify-content: center;
+				}
+
+					body > #contacto > section > section > div {
+						width          : 65%;
+						display        : flex;
+						flex-flow      : row wrap;
+						justify-content: space-between;
+					}
+
+						body > #contacto > section > section > div > h6 {
+							display      : block;
+							width        : 100%;
+							margin-bottom: 32px;
+							font-size    : 2.5em;
+							color        : rgb(228, 21, 27);
+						}
+
+						body > #contacto > section > section > div > ul {
+							list-style: none;
+							width     : 40%;
+						}
+
+							body > #contacto > section > section > div > ul > li {
+								font-size    : 1.1em;
+								color        : rgb(100, 100, 100);
+								margin-bottom: 16px;
+								display      : flex;
+								align-items  : center;
+							}
+
+							body > #contacto > section > section > div > ul > li:last-of-type {
+								margin-bottom: 0px;
+							}
+
+								body > #contacto > section > section > div > ul > li > i {
+									margin-right: 8px;
+									font-size   : 1.5em;
+									color       : rgb(253, 71, 2);
+								}
+
+						body > #contacto > section > section > div > form {
+							width       : 60%;
+							padding-left: 16px;
+						}
+
+							body > #contacto > section > section > div > form > input {
+								width           : 100%;
+								margin-bottom   : 16px;
+								background-color: rgb(225, 225, 225);
+								border-radius   : 8px;
+								padding         : 8px;
+								border          : none;
+							}
+
+							body > #contacto > section > section > div > form > button {
+								width           : 100%;
+								background-color: rgb(228, 21, 27);
+								color           : rgb(255, 255, 255);
+								border-radius   : 8px;
+								padding         : 8px;
+								border          : none;
+								cursor          : pointer;
+								text-align      : center;
+								transition      : all 0.3s ease-out;
+							}
+
+							body > #contacto > section > section > div > form > button:hover {
+								background-color: rgb(253, 71, 2);
+							}
+
+			body > #contacto > section > map {
+				width   : 35%;
+				position: relative;
+			}
+
+				body > #contacto > section > map > iframe {
+					width: 100%;
+					height: 100%;
+				}
+
+	body > footer {
+		width           : 100%;
+		background-color: rgb(225, 225, 225);
+	}
+
+		body > footer > section {
+			width          : 80%;
+			padding        : 48px 0px;
+			margin         : auto;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+			align-items    : center;>
+		}
+
+			body > footer > section > ul:first-of-type {
+				list-style: none;
+			}
+
+				body > footer > section > ul:first-of-type > li {
+					margin-bottom: 8px;
+				}
+
+				body > footer > section > ul:first-of-type > li:last-of-type {
+					margin-bottom: 0px;
+				}
+
+				body > footer > section > ul:first-of-type > li > a {
+					font-size      : 1.1em;
+					text-decoration: none;
+					color          : rgb(228, 21, 27);
+					transition     : all 0.3s ease-out;
+					font-weight    : bold;
+				}
+
+				body > footer > section > ul:first-of-type > li > a:hover {
+					color: rgb(253, 71, 2);
+				}
+
+			body > footer > section > ul:last-of-type {
+				list-style: none;
+			}
+
+				body > footer > section > ul:last-of-type > li {
+					display     : inline-block;
+					margin-right: 16px;
+				}
+
+				body > footer > section > ul:last-of-type > li:last-of-type {
+					margin-right: 0px;
+				}
+
+					body > footer > section > ul:last-of-type > li > a {
+						display         : flex;
+						width           : 40px;
+						height          : 40px;
+						border-radius   : 50%;
+						background-color: rgb(228, 21, 27);
+						color           : rgb(225, 225, 225);
+						transition      : all 0.3s ease-out;
+						text-decoration : none;
+						align-items     : center;
+						justify-content : center;
+					}
+
+					body > footer > section > ul:last-of-type > li > a:hover {
+						background-color: rgb(253, 71, 2);
+					}
+
+		body > footer > footer {
+			width         : 100%;
+			padding       : 16px 0px;
+			border-top    : 1px solid rgb(228, 21, 27);
+			text-align    : center;
+			text-transform: uppercase;
+			font-size     : 0.85em;
+		}
+
+@media all and (orientation: landscape) and (max-width: 1030px) {
+	body > button {
+		display: block;
+	}
+
+	body > nav {
+		width      : 35%;
+		height     : 100vh;
+		margin-left: -35%;
+		background : rgb(228,21,27);
+		background : -moz-linear-gradient(-45deg, rgb(228,21,27) 0%, rgb(253,71,2) 100%);
+		background : -webkit-linear-gradient(-45deg, rgb(228,21,27) 0%,rgb(253,71,2) 100%);
+		background : linear-gradient(135deg, rgb(228,21,27) 0%,rgb(253,71,2) 100%);
+		filter     : progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4151b', endColorstr='#fd4702',GradientType=1 );
+		z-index    : 900;
+		transition : all 0.3s ease-out;
+	}
+
+		body > nav > div {
+			width          : 90%;
+			justify-content: center;
+		}
+
+			body > nav > div > a {
+				height       : 60px;
+				margin-bottom: 32px;
+			}
+
+				body > nav > div > ul > li {
+					display   : block;
+					text-align: center;
+				}
+
+				body > nav > div > ul > li:before {
+					height: 1px;
+					width : 100%;
+					right : auto;
+					top   : auto;
+					bottom: 0;
+					left  : 0;
+				}
+
+					body > nav > div > ul > li > a {
+						padding: 16px 24px;
+					}
+
+	body > header {
+		background-size    : 100% auto;
+		background-position: 0px 0px;
+	}
+
+		body > header > div {
+			width     : 90%;
+			margin-top: -100px;
+		}
+
+			body > header > div > h1 {
+				font-size: 2.5em;
+			}
+		
+		body > header > a {
+			display: flex;
+		}
+
+		body > header > img {
+			display: none;
+		}
+
+		body > #nosotros > div {
+			width: 90%;
+		}
+
+			body > #nosotros > div > h2 {
+				font-size: 2em;
+			}
+
+			body > #nosotros > div > p {
+				font-size: 1em;
+			}
+
+			body > #nosotros > div > section {
+				width: 100%;
+			}
+
+					body > #nosotros > div > section > figure > div {
+						width : 160px;
+						height: 160px;
+					}
+
+					body > #nosotros > div > section > figure > figcaption {
+						font-size: 1em;
+					}
+
+			body > #nosotros > div > a {
+				width: 15%;
+			}
+
+				body > #beneficios > header {
+					background-attachment: scroll;
+				}
+
+					body > #beneficios > header > div {
+						width: 90%;
+					}
+
+						body > #beneficios > header > div > h3 {
+							font-size: 2em;
+						}
+
+						body > #beneficios > header > div > p {
+							font-size: 1em;
+						}
+
+					body > #beneficios > section > img:first-of-type {
+						width: 50%;
+						top  : 0;
+						left : 100px;
+					}
+
+					body > #beneficios > section > img:last-of-type {
+						width : 75%;
+						top   : auto;
+						right : 0px;
+						bottom: 0px;
+					}
+
+		body > #blog > img {
+			display : none;
+		}
+
+		body > #blog > div {
+			width: 90%;
+		}
+
+			body > #blog > div > h4 {
+				font-size: 2em;
+			}
+
+			body > #blog > div > article {
+				width: 32.5%;
+			}
+
+				body > #blog > div > article > header {
+					height: 200px;
+				}
+
+		body > #blog > a {
+			width: 15%;
+		}
+
+		body > #contacto > header {
+			height               : 250px;
+			background-attachment: scroll;
+		}
+
+			body > #contacto > header > h6 {
+				font-size: 2em;
+			}
+
+		body > #contacto > section {
+			height  : auto;
+			position: static;
+		}
+
+				body > #contacto > section > section {
+					width : 100%;
+					height: 400px;
+				}
+
+						body > #contacto > section > section > div > h6 {
+							font-size: 2em;
+						}
+
+			body > #contacto > section > map {
+				width   : 100%;
+				height  : 250px;
+				position: static;
+			}
+
+				body > #contacto > section > map > iframe {
+					width: 100%;
+					height: 100%;
+				}
+
+	body > footer {
+		width           : 100%;
+		background-color: rgb(225, 225, 225);
+	}
+
+		body > footer > section {
+			width: 90%;
+		}
+}
+
+@media all and (orientation: landscape) and (max-width: 740px) {
+	body > nav > div > a {
+		height       : 35px;
+		margin-bottom: 24px;
+	}
+
+		body > header > div > h1 {
+			font-size: 1.75em;
+		}
+		
+		body > header > a {
+			display: none;
+		}
+
+			body > #nosotros > div > h2 {
+				font-size: 1.5em;
+			}
+
+				body > #nosotros > div > section > figure > div {
+					width : 120px;
+					height: 120px;
+				}
+
+			body > #nosotros > div > a {
+				width: 20%;
+			}
+
+		body > #beneficios > header {
+			height               : 100vh;
+			background-attachment: scroll;
+		}
+
+				body > #beneficios > header > div > h3 {
+					font-size: 1.5em;
+				}
+
+				body > #beneficios > header > div > p {
+					white-space: normal;
+				}
+
+		body > #beneficios > section {
+			display: none;
+		}
+
+			body > #beneficios > section > img {
+				display: none;
+			}
+
+		body > #blog > div {
+			width: 90%;
+		}
+
+			body > #blog > div > h4 {
+				font-size: 2em;
+			}
+
+			body > #blog > div > article {
+				width        : 100%;
+				margin-bottom: 32px;
+			}
+
+			body > #blog > div > article:last-of-type {
+				margin-bottom: 0px;
+			}
+
+				body > #blog > div > article > header {
+					height: 250px;
+				}
+
+		body > #blog > a {
+			width: 20%;
+		}
+
+		body > #contacto > header {
+			height: 200px;
+		}
+
+			body > #contacto > header > h6 {
+				font-size: 1.75em;
+			}
+
+					body > #contacto > section > section > div > h6 {
+						font-size: 1.75em;
+					}
+}
+
+@media all and (orientation: portrait) and (max-width: 770px) {
+	body > button {
+		display: block;
+	}
+
+	body > nav {
+		width      : 50%;
+		height     : 100vh;
+		margin-left: -50%;
+		background : rgb(228,21,27);
+		background : -moz-linear-gradient(-45deg, rgb(228,21,27) 0%, rgb(253,71,2) 100%);
+		background : -webkit-linear-gradient(-45deg, rgb(228,21,27) 0%,rgb(253,71,2) 100%);
+		background : linear-gradient(135deg, rgb(228,21,27) 0%,rgb(253,71,2) 100%);
+		filter     : progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4151b', endColorstr='#fd4702',GradientType=1 );
+		z-index    : 900;
+		transition : all 0.3s ease-out;
+	}
+
+		body > nav > div {
+			width          : 90%;
+			justify-content: center;
+		}
+
+			body > nav > div > a {
+				height       : 60px;
+				margin-bottom: 32px;
+			}
+
+				body > nav > div > ul > li {
+					display   : block;
+					text-align: center;
+				}
+
+				body > nav > div > ul > li:before {
+					height: 1px;
+					width : 100%;
+					right : auto;
+					top   : auto;
+					bottom: 0;
+					left  : 0;
+				}
+
+					body > nav > div > ul > li > a {
+						padding: 16px 24px;
+					}
+
+	body > header {
+		text-align      : center;
+		background-image: none !important;
+		background-color: rgb(228,21,27);
+	}
+
+		body > header > div {
+			width: 90%;
+		}
+
+			body > header > div > h1 {
+				font-size: 2.5em;
+			}
+
+		body > header > a {
+			display: flex;
+			border : 1px solid rgb(0, 0, 0);
+			color  : rgb(0, 0, 0);
+		}
+
+		body > header > img {
+			display: none;
+		}
+
+		body > #nosotros > div {
+			width : 90%;
+		}
+
+			body > #nosotros > div > h2 {
+				font-size: 2em;
+			}
+
+			body > #nosotros > div > p {
+				font-size: 1em;
+			}
+
+			body > #nosotros > div > section {
+				width: 100%;
+			}
+
+					body > #nosotros > div > section > figure > div {
+						width : 120px;
+						height: 120px;
+					}
+
+			body > #nosotros > div > a {
+				width: 25%;
+			}
+
+		body > #beneficios > header {
+			background-attachment: scroll;
+		}
+
+			body > #beneficios > header > div {
+				width: 90%;
+			}
+
+				body > #beneficios > header > div > h3 {
+					font-size: 2em;
+				}
+
+				body > #beneficios > header > div > p {
+					font-size: 1em;
+				}
+
+			body > #beneficios > section > img:first-of-type {
+				width: 80%;
+				top  : 0;
+				left : -5px;
+			}
+
+			body > #beneficios > section > img:last-of-type {
+				width : 100%;
+				top   : auto;
+				right : 0px;
+				bottom: 0px;
+			}
+
+		body > #blog > img {
+			display: none;
+		}
+
+		body > #blog > div {
+			width: 90%;
+		}
+
+			body > #blog > div > h4 {
+				font-size: 2em;
+			}
+
+			body > #blog > div > article {
+				width        : 100%;
+				margin-bottom: 32px;
+			}
+
+		body > #blog > a {
+			width: 20%;
+		}
+
+		body > #contacto > header {
+			height: 200px;
+		}
+
+			body > #contacto > header > h6 {
+				width    : 90%;
+				font-size: 1.75em;
+			}
+
+		body > #contacto > section {
+			height: auto;
+		}
+
+				body > #contacto > section > section {
+					width  : 100%;
+					padding: 32px 0px;
+				}
+
+					body > #contacto > section > section > div {
+						width: 90%;
+					}
+
+						body > #contacto > section > section > div > h6 {
+							font-size: 2em;
+						}
+
+			body > #contacto > section > map {
+				width   : 100%;
+				height  : 200px;
+				position: static;
+			}
+
+				body > #contacto > section > map > iframe {
+					width: 100%;
+					height: 100%;
+				}
+
+		body > footer > section {
+			width: 90%;
+		}
+}
+
+@media all and (orientation: portrait) and (max-width: 420px) {
+	body > nav {
+		width      : 75%;
+		margin-left: -75%;
+	}
+
+		body > header > div > h1 {
+			font-size: 1.75em;
+		}
+
+		body > header > a {
+			display: flex;
+			border : 1px solid rgb(0, 0, 0);
+			color  : rgb(0, 0, 0);
+		}
+
+		body > header > img {
+			display: none;
+		}
+
+			body > #nosotros > div > section {
+				width: 90%;
+			}
+
+				body > #nosotros > div > section > figure {
+					width        : 100%;
+					margin-bottom: 16px;
+				}
+
+					body > #nosotros > div > section > figure > div {
+						width : 220px;
+						height: 220px;
+					}
+
+			body > #nosotros > div > a {
+				width: 35%;
+			}
+
+		body > #beneficios > header {
+			height: 100vh;
+		}
+
+			body > #beneficios > header > div {
+				width: 90%;
+			}
+
+				body > #beneficios > header > div > h3 {
+					font-size: 1.75em;
+				}
+
+			body > #beneficios > section > img:first-of-type {
+				display: none;
+			}
+
+			body > #beneficios > section > img:last-of-type {
+				display: none;
+			}
+
+		body > #blog > a {
+			width: 30%;
+		}
+
+		body > #contacto {
+			width: 100%;
+		}
+
+			body > #contacto > header {
+				height: 200px;
+				background-image: none !important;
+				background-color: rgb(253, 71, 2);
+			}
+
+				body > #contacto > header > h6 {
+					font-size: 1.5em;
+				}
+
+							body > #contacto > section > section > div > h6 {
+								font-size: 1.75em;
+							}
+
+							body > #contacto > section > section > div > ul {
+								width        : 100%;
+								margin-bottom: 32px;
+							}
+
+							body > #contacto > section > section > div > form {
+								width       : 100%;
+								padding-left: 0px;
+							}
+
+				body > #contacto > section > map {
+					width   : 100%;
+					height  : 200px;
+					position: static;
+				}
+
+		body > footer > section {
+			width: 90%;
+		}
+
+			body > footer > section > ul:first-of-type {
+				width         : 100%;
+				padding-bottom: 32px;
+				margin-bottom : 32px;
+				border-bottom : 1px solid rgb(228, 21, 27);
+				text-align    : center;
+			}
+
+			body > footer > section > ul:last-of-type {
+				width      : 100%;
+				text-align : center;
+				padding-top: 32px;
+				margin-top : 32px;
+				border-top : 1px solid rgb(228, 21, 27);
+			}
+
+			body > footer > section > img {
+				display: block;
+				width  : 50%;
+				margin : auto;
+			}
+
+		body > footer > footer {
+			font-size: 0.75em;
+		}
+}
