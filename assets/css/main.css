@@ -70,9 +70,10 @@ body {
 		}
 
 			body > nav > div > a {
-				display: block;
-				height : 70px;
-				width  : auto;
+				display   : block;
+				height    : 70px;
+				width     : auto;
+				transition: all 0.3s ease-out;
 			}
 
 				body > nav > div > a > img {
@@ -207,6 +208,17 @@ body {
 					font-size: 1.5em;
 				}
 
+			body > #nosotros > div > h3 {
+				color        : rgb(236, 9, 40);
+				font-weight  : 100;
+				font-size    : 2.5em;
+				margin-bottom: 32px;
+			}
+
+				body > #nosotros > div > h3 > strong {
+					font-size: 1.5em;
+				}
+
 			body > #nosotros > div > p {
 				font-size    : 1.25em;
 				font-weight  : 300;
@@ -225,48 +237,6 @@ body {
 				flex-flow      : row wrap;
 				justify-content: space-between;
 			}
-
-				body > #nosotros > div > section > figure {
-					width          : 20%;
-					display        : flex;
-					align-items    : center;
-					flex-direction : column;
-				}
-
-					body > #nosotros > div > section > figure > div {
-						width        : 180px;
-						height       : 180px;
-						background   : rgb(228,21,27); /* Old browsers */
-						background   : -moz-linear-gradient(left, rgb(228,21,27) 0%, rgb(253,71,2) 100%);
-						background   : -webkit-linear-gradient(left, rgb(228,21,27) 0%,rgb(253,71,2) 100%);
-						background   : linear-gradient(to right, rgb(228,21,27) 0%,rgb(253,71,2) 100%);
-						filter       : progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4151b', endColorstr='#fd4702',GradientType=1 );
-						border-radius: 50%;
-						padding      : 3px;
-						position     : relative;
-					}
-
-						body > #nosotros > div > section > figure > div > div {
-							width          : 100%;
-							height         : 100%;
-							border         : 3px solid rgb(255, 255, 255);
-							display        : flex;
-							align-items    : center;
-							justify-content: center;
-							border-radius  : 50%;
-						}
-
-							body > #nosotros > div > section > figure > div > div > img {
-								display: block;
-								width  : 50%;
-							}
-
-					body > #nosotros > div > section > figure > figcaption {
-						white-space: pre-line;
-						margin-top : 16px;
-						font-size  : 1.1em;
-						text-align : center;
-					}
 
 			body > #nosotros > div > a {
 				display         : block;
@@ -287,13 +257,13 @@ body {
 				background-color: rgb(253, 71, 2);
 			}
 
-	body > #beneficios {
+	body > #servicios {
 		width   : 100%;
 		height  : 100vh;
 		position: relative;
 	}
 
-		body > #beneficios > header {
+		body > #servicios > header {
 			width                : 100%;
 			height               : 60%;
 			background-size      : cover;
@@ -302,48 +272,84 @@ body {
 			display              : flex;
 			align-items          : center;
 			justify-content      : center;
+			color                : rgb(255, 255, 255);
+			flex-direction       : column;
 		}
 
-			body > #beneficios > header > div {
-				width: 80%;
-				color: rgb(255, 255, 255);
+			body > #servicios > header > h3 {
+				color        : rgb(255, 255, 255);
+				font-weight  : 100;
+				font-size    : 2.5em;
+				margin-bottom: 32px;
 			}
 
-				body > #beneficios > header > div > h3 {
-					font-size    : 2.5em;
-					font-weight  : 100;
-					margin-bottom: 32px;
+				body > #servicios > header > h3 > strong {
+					font-size: 1.5em;
 				}
 
-				body > #beneficios > header > div > p {
-					font-size    : 1.1em;
-					font-weight  : 300;
-					margin-bottom: 32px;
-					white-space  : pre-line;
-				}
+			body > #servicios > header > div {
+				width          : 80%;
+				display        : flex;
+				flex-flow      : row wrap;
+				justify-content: space-between;
+			}
 
-				body > #beneficios > header > div > p:last-of-type {
-					margin-bottom: 0px;
-				}
+					body > #servicios > header > div > figure {
+						width          : 20%;
+						display        : flex;
+						align-items    : center;
+						flex-direction : column;
+					}
 
-		body > #beneficios > section {
+						body > #servicios > header > div > figure > div {
+							width           : 180px;
+							height          : 180px;
+							background-color: rgb(255, 255, 255);
+							border-radius   : 50%;
+							padding         : 3px;
+							position        : relative;
+						}
+
+							body > #servicios > header > div > figure > div > div {
+								width          : 100%;
+								height         : 100%;
+								border         : 3px solid rgb(229, 19, 29);
+								display        : flex;
+								align-items    : center;
+								justify-content: center;
+								border-radius  : 50%;
+							}
+
+								body > #servicios > header > div > figure > div > div > img {
+									display: block;
+									width  : 50%;
+								}
+
+						body > #servicios > header > div > figure > figcaption {
+							white-space: pre-line;
+							margin-top : 16px;
+							font-size  : 1.1em;
+							text-align : center;
+						}
+
+		body > #servicios > section {
 			width   : 100%;
 			height  : 40%;
 			position: relative;
 		}
 
-			body > #beneficios > section > img {
+			body > #servicios > section > img {
 				display : block;
 				position: absolute;
 			}
 
-			body > #beneficios > section > img:first-of-type {
+			body > #servicios > section > img:first-of-type {
 				width: 35%;
 				top  : 0;
 				left : 100px;
 			}
 
-			body > #beneficios > section > img:last-of-type {
+			body > #servicios > section > img:last-of-type {
 				width: 50%;
 				top  : -50px;
 				right: 100px;
@@ -583,7 +589,7 @@ body {
 			display        : flex;
 			flex-flow      : row wrap;
 			justify-content: space-between;
-			align-items    : center;>
+			align-items    : center;
 		}
 
 			body > footer > section > ul:first-of-type {
@@ -641,12 +647,11 @@ body {
 					}
 
 		body > footer > footer {
-			width         : 100%;
-			padding       : 16px 0px;
-			border-top    : 1px solid rgb(228, 21, 27);
-			text-align    : center;
-			text-transform: uppercase;
-			font-size     : 0.85em;
+			width     : 100%;
+			padding   : 16px 0px;
+			border-top: 1px solid rgb(228, 21, 27);
+			text-align: center;
+			font-size : 0.85em;
 		}
 
 @media all and (orientation: landscape) and (max-width: 1030px) {
@@ -655,16 +660,17 @@ body {
 	}
 
 	body > nav {
-		width      : 35%;
-		height     : 100vh;
-		margin-left: -35%;
-		background : rgb(228,21,27);
-		background : -moz-linear-gradient(-45deg, rgb(228,21,27) 0%, rgb(253,71,2) 100%);
-		background : -webkit-linear-gradient(-45deg, rgb(228,21,27) 0%,rgb(253,71,2) 100%);
-		background : linear-gradient(135deg, rgb(228,21,27) 0%,rgb(253,71,2) 100%);
-		filter     : progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4151b', endColorstr='#fd4702',GradientType=1 );
-		z-index    : 900;
-		transition : all 0.3s ease-out;
+		width         : 35%;
+		height        : 100vh;
+		margin-left   : -35%;
+		background    : rgb(228,21,27);
+		background    : -moz-linear-gradient(-45deg, rgb(228,21,27) 0%, rgb(253,71,2) 100%);
+		background    : -webkit-linear-gradient(-45deg, rgb(228,21,27) 0%,rgb(253,71,2) 100%);
+		background    : linear-gradient(135deg, rgb(228,21,27) 0%,rgb(253,71,2) 100%);
+		filter        : progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4151b', endColorstr='#fd4702',GradientType=1 );
+		z-index       : 900;
+		transition    : all 0.3s ease-out;
+		flex-direction: column;
 	}
 
 		body > nav > div {
@@ -725,8 +731,16 @@ body {
 				font-size: 2em;
 			}
 
+			body > #nosotros > div > h3 {
+				font-size: 2em;
+			}
+
 			body > #nosotros > div > p {
 				font-size: 1em;
+			}
+
+			body > #nosotros > div > a {
+				width: 20%;
 			}
 
 			body > #nosotros > div > section {
@@ -742,33 +756,63 @@ body {
 						font-size: 1em;
 					}
 
-			body > #nosotros > div > a {
-				width: 15%;
+			body > #servicios > header > h3 {
+				font-size: 2em;
 			}
 
-				body > #beneficios > header {
-					background-attachment: scroll;
+				body > #servicios > header > h3 > strong {
+					font-size: 1.5em;
 				}
 
-					body > #beneficios > header > div {
-						width: 90%;
+			body > #servicios > header > div {
+				width: 90%;
+			}
+
+					body > #servicios > header > div > figure {
+						width          : 20%;
+						display        : flex;
+						align-items    : center;
+						flex-direction : column;
 					}
 
-						body > #beneficios > header > div > h3 {
-							font-size: 2em;
+						body > #servicios > header > div > figure > div {
+							width           : 160px;
+							height          : 160px;
+							background-color: rgb(255, 255, 255);
+							border-radius   : 50%;
+							padding         : 3px;
+							position        : relative;
 						}
 
-						body > #beneficios > header > div > p {
-							font-size: 1em;
+							body > #servicios > header > div > figure > div > div {
+								width          : 100%;
+								height         : 100%;
+								border         : 3px solid rgb(229, 19, 29);
+								display        : flex;
+								align-items    : center;
+								justify-content: center;
+								border-radius  : 50%;
+							}
+
+								body > #servicios > header > div > figure > div > div > img {
+									display: block;
+									width  : 50%;
+								}
+
+						body > #servicios > header > div > figure > figcaption {
+							white-space: pre-line;
+							margin-top : 16px;
+							font-size  : 1.1em;
+							text-align : center;
 						}
 
-					body > #beneficios > section > img:first-of-type {
+					body > #servicios > section > img:first-of-type {
 						width: 50%;
 						top  : 0;
 						left : 100px;
 					}
 
-					body > #beneficios > section > img:last-of-type {
+					body > #servicios > section > img:last-of-type {
 						width : 75%;
 						top   : auto;
 						right : 0px;
@@ -870,24 +914,24 @@ body {
 				width: 20%;
 			}
 
-		body > #beneficios > header {
+		body > #servicios > header {
 			height               : 100vh;
 			background-attachment: scroll;
 		}
 
-				body > #beneficios > header > div > h3 {
+				body > #servicios > header > div > h3 {
 					font-size: 1.5em;
 				}
 
-				body > #beneficios > header > div > p {
+				body > #servicios > header > div > p {
 					white-space: normal;
 				}
 
-		body > #beneficios > section {
+		body > #servicios > section {
 			display: none;
 		}
 
-			body > #beneficios > section > img {
+			body > #servicios > section > img {
 				display: none;
 			}
 
@@ -1007,6 +1051,10 @@ body {
 				font-size: 2em;
 			}
 
+			body > #nosotros > div > h3 {
+				font-size: 2em;
+			}
+
 			body > #nosotros > div > p {
 				font-size: 1em;
 			}
@@ -1024,33 +1072,39 @@ body {
 				width: 25%;
 			}
 
-		body > #beneficios > header {
-			background-attachment: scroll;
+		body > #servicios > header {
+			height: 100%;
 		}
 
-			body > #beneficios > header > div {
-				width: 90%;
+			body > #servicios > header > h3 {
+				font-size: 2em;
 			}
 
-				body > #beneficios > header > div > h3 {
-					font-size: 2em;
-				}
-
-				body > #beneficios > header > div > p {
-					font-size: 1em;
-				}
-
-			body > #beneficios > section > img:first-of-type {
-				width: 80%;
-				top  : 0;
-				left : -5px;
+			body > #servicios > header > div {
+				width          : 90%;
+				justify-content: space-around;
 			}
 
-			body > #beneficios > section > img:last-of-type {
-				width : 100%;
-				top   : auto;
-				right : 0px;
-				bottom: 0px;
+					body > #servicios > header > div > figure {
+						width: 33.33%;
+					}
+
+					body > #servicios > header > div > figure:nth-of-type(4),
+					body > #servicios > header > div > figure:nth-of-type(5) {
+						margin-top: 28px;
+					}
+
+						body > #servicios > header > div > figure > div {
+							width : 170px;
+							height: 170px;
+						}
+
+			body > #servicios > section > img:first-of-type {
+				display: none;
+			}
+
+			body > #servicios > section > img:last-of-type {
+				display: none;
 			}
 
 		body > #blog > img {
@@ -1154,23 +1208,47 @@ body {
 				width: 35%;
 			}
 
-		body > #beneficios > header {
-			height: 100vh;
+		body > #servicios {
+			height: auto;
 		}
 
-			body > #beneficios > header > div {
-				width: 90%;
+			body > #servicios > header {
+				height : auto;
+				padding: 52px 0px;
 			}
 
-				body > #beneficios > header > div > h3 {
-					font-size: 1.75em;
+				body > #servicios > header > h3 {
+					font-size: 2em;
 				}
 
-			body > #beneficios > section > img:first-of-type {
+				body > #servicios > header > div {
+					width          : 90%;
+					justify-content: space-around;
+				}
+
+					body > #servicios > header > div > figure {
+						width        : 90%;
+						margin-bottom: 24px;
+					}
+
+					body > #servicios > header > div > figure:nth-of-type(4) {
+						margin-bottom: 24px;
+					}
+
+					body > #servicios > header > div > figure:nth-of-type(5) {
+						margin-bottom: 0px;
+					}
+
+						body > #servicios > header > div > figure > div {
+							width : 180px;
+							height: 180px;
+						}
+
+			body > #servicios > section > img:first-of-type {
 				display: none;
 			}
 
-			body > #beneficios > section > img:last-of-type {
+			body > #servicios > section > img:last-of-type {
 				display: none;
 			}
 

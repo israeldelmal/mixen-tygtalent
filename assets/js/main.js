@@ -6,11 +6,15 @@ $(window).scroll(function() {
 				'background-color': 'rgba(228, 21, 27, 0.95)',
 				'height': '100px'
 			});
+
+			$('body > nav > div > a').css('height', '50px');
 		} else {
 			$('nav').css({
 				'background-color': 'transparent',
 				'height': '120px'
 			});
+
+			$('body > nav > div > a').css('height', '70px');
 		}
 	}
 });
